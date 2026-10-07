@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #050505,
+        #202020
+    );
+
+    color: white;
+
+    text-align: center;
+
+    min-height: 100vh;
+}
+
+h1 {
+    padding: 20px;
+
+    color: #00ffcc;
+
+    text-shadow:
+        0 0 10px #00ffcc;
+}
+
+
+/* MAIN CONTAINER */
+
+.main-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 40px;
+
+    padding: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+/* CAMERA */
+
+.camera-section {
+
+    width: 400px;
+
+    background: #151515;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 20px #000;
+}
+
+.camera-section h2 {
+
+    color: #00ffcc;
+
+    margin-bottom: 15px;
+}
+
+#camera {
+
+    width: 100%;
+
+    border-radius: 12px;
+
+    transform: scaleX(-1);
+
+    border: 3px solid #00ffcc;
+}
+
+#handCanvas {
+
+    position: absolute;
+
+    pointer-events: none;
+}
+
+#gesture {
+
+    margin-top: 15px;
+
+    color: yellow;
+
+    font-size: 20px;
+}
+
+
+/* GAME */
+
+.game-section {
+
+    width: 400px;
+}
+
+.score {
+
+    background: #151515;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    font-size: 24px;
+
+    color: #00ffcc;
+}
+
+
+/* ROAD */
+
+#road {
+
+    width: 350px;
+
+    height: 550px;
+
+    margin: auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #444;
+
+    border-left: 10px solid white;
+
+    border-right: 10px solid white;
+}
+
+
+/* ROAD LINES */
+
+.road-line {
+
+    position: absolute;
+
+    width: 8px;
+
+    height: 100px;
+
+    background: white;
+
+    left: 50%;
+}
+
+.line1 {
+    top: 0;
+}
+
+.line2 {
+    top: 200px;
+}
+
+.line3 {
+    top: 400px;
+}
+
+
+/* PLAYER CAR */
+
+#car {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 145px;
+
+    font-size: 55px;
+
+    transition: left 0.1s;
+}
+
+
+/* ENEMY CAR */
+
+#enemy {
+
+    position: absolute;
+
+    top: -80px;
+
+    left: 140px;
+
+    font-size: 55px;
+}
+
+
+/* MESSAGE */
+
+#message {
+
+    margin: 15px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: yellow;
+}
+
+
+/* BUTTON */
+
+button {
+
+    padding: 14px 30px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #00cc99;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+button:hover {
+
+    background: #009977;
+
+    transform: scale(1.05);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .camera-section,
+    .game-section {
+
+        width: 95%;
+    }
+
+    #road {
+
+        width: 320px;
+    }
+}
